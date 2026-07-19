@@ -1,20 +1,20 @@
 name: First Workflow
 
 on:
-    push:
-        branches:
-            - main
+  push:
+    branches:
+      - main
 
 jobs:
-    example-job:
-        runs-on: ubuntu-latest
+  example-job:
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: Print a welcome message
-              run: echo "Hello, world!"
+    steps:
+      - name: Print a welcome message
+        run: echo "Hello, world!"
 
-            - name: Checkout code
-              uses: actions/checkout@v7
-              
-            - name: List files in the repository
-              run: ls -la
+      - name: Checkout code
+        uses: actions/checkout@v7.0.0
+
+      - name: List files in the repository
+        run: ls -la

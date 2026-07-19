@@ -1,0 +1,24 @@
+name: Push and Pull Request
+
+on:
+    push:
+        branches:
+            - main
+        paths:
+            - "src/**"
+
+    pull_request:
+        branches:
+            - main
+        paths:
+            - "src/**"
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v7.0.0
+
+            - name: Run tests
+              run: echo "Tests passed"
